@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Practical Files</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#0d1117;
+      color:white;
+      padding:20px;
+    }
+
+    h1{
+      text-align:center;
+      margin-bottom:25px;
+      color:#58a6ff;
+    }
+
+    .container{
+      max-width:900px;
+      margin:auto;
+    }
+
+    .folder{
+      background:#161b22;
+      border:1px solid #30363d;
+      border-radius:10px;
+      margin-bottom:15px;
+      overflow:hidden;
+    }
+
+    .folder-title{
+      padding:15px;
+      cursor:pointer;
+      font-size:18px;
+      font-weight:bold;
+      background:#21262d;
+      transition:0.3s;
+    }
+
+    .folder-title:hover{
+      background:#30363d;
+    }
+
+    .files{
+      display:none;
+      padding:10px 20px;
+    }
+
+    .file{
+      padding:10px;
+      margin:8px 0;
+      background:#0d1117;
+      border-radius:8px;
+      border:1px solid #30363d;
+      transition:0.3s;
+    }
+
+    .file:hover{
+      transform:translateX(5px);
+      background:#161b22;
+    }
+
+    .file a{
+      text-decoration:none;
+      color:#58a6ff;
+      font-size:16px;
+    }
+
+    .icon{
+      margin-right:8px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>📁 My Practical Files</h1>
+
+  <div class="container">
+
+    <!-- CUDA -->
+    <div class="folder">
+      <div class="folder-title">📂 CUDA_Practicals</div>
+
+      <div class="files">
+        <div class="file">
+          <a href="CUDA_Practicals/matrix_mul.cu" target="_blank">
+            💻 matrix_mul.cu
+          </a>
+        </div>
+
+        <div class="file">
+          <a href="CUDA_Practicals/vector_add.cu" target="_blank">
+            💻 vector_add.cu
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- DL -->
+    <div class="folder">
+      <div class="folder-title">📂 DL</div>
+
+      <div class="files">
+
+        <div class="file">
+          <a href="DL/1.Boston housing price/1_Boston_House_Price_Prediction.ipynb" target="_blank">
+            📘 1_Boston_House_Price_Prediction.ipynb
+          </a>
+        </div>
+
+        <div class="file">
+          <a href="DL/1.Boston housing price/1_boston_housing.csv" target="_blank">
+            📊 1_boston_housing.csv
+          </a>
+        </div>
+
+        <div class="file">
+          <a href="DL/2.IMDB/2_IMDB.ipynb" target="_blank">
+            📘 2_IMDB.ipynb
+          </a>
+        </div>
+
+        <div class="file">
+          <a href="DL/2.IMDB/IMDB_Dataset.csv" target="_blank">
+            📊 IMDB_Dataset.csv
+          </a>
+        </div>
+
+        <div class="file">
+          <a href="DL/3.Plant Disease/plant_disease.ipynb" target="_blank">
+            📘 plant_disease.ipynb
+          </a>
+        </div>
+
+        <div class="file">
+          <a href="DL/4.Google_Stock_Price/Google_Stock_Price.csv" target="_blank">
+            📊 Google_Stock_Price.csv
+          </a>
+        </div>
+
+        <div class="file">
+          <a href="DL/4.Google_Stock_Price/Google_Stock_Price.ipynb" target="_blank">
+            📘 Google_Stock_Price.ipynb
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- HPC -->
+    <div class="folder">
+      <div class="folder-title">📂 HPC</div>
+
+      <div class="files">
+
+        <div class="file">
+          <a href="HPC/3_parallel_reduction.cu" target="_blank">
+            💻 3_parallel_reduction.cu
+          </a>
+        </div>
+
+        <div class="file">
+          <a href="HPC/4_matrix_multiplication.cu" target="_blank">
+            💻 4_matrix_multiplication.cu
+          </a>
+        </div>
+
+        <div class="file">
+          <a href="HPC/4_vector_addition.cu" target="_blank">
+            💻 4_vector_addition.cu
+          </a>
+        </div>
+
+        <div class="file">
+          <a href="HPC/bubble_mergesort_OpenMP.cpp" target="_blank">
+            ⚙️ bubble_mergesort_OpenMP.cpp
+          </a>
+        </div>
+
+        <div class="file">
+          <a href="HPC/graph_parallel.cpp" target="_blank">
+            ⚙️ graph_parallel.cpp
+          </a>
+        </div>
+
+        <div class="file">
+          <a href="HPC/minmaxsum.cpp" target="_blank">
+            ⚙️ minmaxsum.cpp
+          </a>
+        </div>
+
+        <div class="file">
+          <a href="HPC/practicle2.exe" target="_blank">
+            🖥️ practicle2.exe
+          </a>
+        </div>
+
+        <div class="file">
+          <a href="HPC/practicle3.exe" target="_blank">
+            🖥️ practicle3.exe
+          </a>
+        </div>
+
+        <div class="file">
+          <a href="HPC/program.exe" target="_blank">
+            🖥️ program.exe
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    const folders = document.querySelectorAll(".folder-title");
+
+    folders.forEach(folder => {
+      folder.addEventListener("click", () => {
+
+        const files = folder.nextElementSibling;
+
+        if(files.style.display === "block"){
+          files.style.display = "none";
+        }
+        else{
+          files.style.display = "block";
+        }
+
+      });
+    });
+  </script>
+
+</body>
+</html>
